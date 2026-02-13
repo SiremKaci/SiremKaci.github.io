@@ -21,7 +21,7 @@
 
 ### À propos de moi
 
-Jeune data scientist autodidacte basé au Québec, passionné par la transformation de données brutes en **décisions impactantes**.  
+Jeune data scientist autodidacte basé en Ontario, passionné par la transformation de données brutes en **décisions impactantes**.  
 J’aime les défis du déséquilibre de classes, l’interprétabilité des modèles, la qualité des données et les visualisations qui racontent une histoire.
 
 Même sans expérience salariée, j’ai réalisé des projets **end-to-end** couvrant nettoyage, EDA avancée, feature engineering, modélisation (classique + DL), rééquilibrage, interprétation (SHAP) et validation rigoureuse (Pandera).
@@ -52,14 +52,8 @@ Même sans expérience salariée, j’ai réalisé des projets **end-to-end** co
 
 ### Projets Sélectionnés
 
-#### 1. Analyse Exploratoire & Visualisation – Données de criminalité Los Angeles
-Nettoyage exhaustif, détection d’outliers, analyses univariées/bivariées/multivariées, heatmaps temporelles & spatiales (Folium/Plotly), tests statistiques (Shapiro, ANOVA, corrélation Pearson).  
-→ Insights actionnables : pics horaires, quartiers à risque, tendances saisonnières.
 
-**Stack** : pandas, numpy, seaborn, plotly, matplotlib, scipy.stats, pandera  
-**Repo** : [Lien à venir – crée un repo dédié]
-
-#### 2. Détection de Fraude Carte de Crédit (dataset déséquilibré ~0.17%)
+#### 1. Détection de Fraude Carte de Crédit (dataset déséquilibré ~0.17%)
 Pipeline complet : rééquilibrage (SMOTE + RandomUnderSampler + SMOTETomek + TomekLinks), scaling, modèles (LogisticRegression, XGBoost, simple NN Keras), focus sur Precision-Recall & Average Precision Score (business-oriented).  
 Interprétation avec SHAP. Validation qualité via Pandera.
 
@@ -67,13 +61,13 @@ Interprétation avec SHAP. Validation qualité via Pandera.
 **Stack** : scikit-learn, imbalanced-learn, xgboost, tensorflow/keras, shap, pandera, plotly  
 **Repo** : [Lien à venir]
 
-#### 3. Classification médicale – Détection de Glaucome (images ou tabular ?)
+#### 2. Classification médicale – Détection de Glaucome (images ou tabular ?)
 Modèle de classification binaire avec deep learning (PyTorch + torchvision ou Keras). Augmentations (Albumentations), transfer learning possible, interprétabilité.
 
 **Stack** : torch, torchvision, albumentations, tensorflow/keras (si version DL)  
 **Repo** : [Lien]
 
-#### 4. NLP – Classification Spam / Ham
+#### 3. NLP – Classification Spam / Ham
 Nettoyage texte, vectorisation, modèles classiques + éventuellement embeddings / NN simples.
 
 **Stack** : scikit-learn, pandas, (éventuellement torch si deep)
