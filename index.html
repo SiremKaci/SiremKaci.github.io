@@ -40,7 +40,7 @@
 					<li><a href="https://www.linkedin.com/in/sirem-kaci-6563b43b0/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 					<li>
   <a href="#" 
-     onclick="copyEmail(event)" 
+     onclick="copyToClipboard('siremaha@gmail.com', this); return false;" 
      class="icon solid fa-envelope" 
      title="Copier mon email">
     <span class="label">Email</span>
@@ -48,34 +48,37 @@
 </li>
 
 <script>
-function copyEmail(e) {
-  e.preventDefault(); // empêche le comportement par défaut du lien
-  
-  const email = "siremaha@gmail.com";
-  navigator.clipboard.writeText(email).then(() => {
+function copyToClipboard(text, element) {
+  navigator.clipboard.writeText(text).then(() => {
     // Message temporaire
-    const msg = document.createElement("div");
-    msg.textContent = "Adresse mail copiée !";
-    msg.style.position = "fixed";
-    msg.style.bottom = "20px";
-    msg.style.right = "20px";
-    msg.style.background = "#00d4ff";
-    msg.style.color = "white";
-    msg.style.padding = "12px 20px";
-    msg.style.borderRadius = "8px";
-    msg.style.boxShadow = "0 4px 12px rgba(0,0,0,0.2)";
-    msg.style.zIndex = "9999";
-    msg.style.fontSize = "15px";
+    const msg = document.createElement('div');
+    msg.textContent = 'Adresse mail copiée !';
+    msg.style.cssText = `
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00d4ff;
+      color: white;
+      padding: 14px 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+      z-index: 9999;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    `;
     document.body.appendChild(msg);
 
-    // Disparaît après 2,5 secondes
+    // Apparition + disparition
+    setTimeout(() => { msg.style.opacity = '1'; }, 10);
     setTimeout(() => {
-      msg.style.opacity = "0";
+      msg.style.opacity = '0';
       setTimeout(() => msg.remove(), 500);
-    }, 2500);
+    }, 2800);
   }).catch(err => {
-    console.error("Erreur copie : ", err);
-    alert("Impossible de copier, sélectionne manuellement : siremaha@gmail.com");
+    console.error('Erreur copie :', err);
+    alert('Impossible de copier automatiquement.\nCopie manuellement : siremaha@gmail.com');
   });
 }
 </script>
